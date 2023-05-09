@@ -2,7 +2,8 @@
 
 <ul>
 <% @tasks.each do |task|  %>
-<li><%= task.title  %> </li>
+<li> <p><%= task.completed ? '[x]' : '[ ]' %></p> <%= link_to task.title, task_path(task), class: "btn btn-primary" %></li>
+
 <%end  %>
 
 </ul>
